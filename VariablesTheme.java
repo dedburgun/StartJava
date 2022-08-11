@@ -64,7 +64,7 @@ public class VariablesTheme {
         System.out.println("Перестановка значений переменных с помощью арифмитический действий:");
         num2 += num1;
         num1 = num2 - num1;
-        num2 = num2 - num1;
+        num2 -= num1;
         System.out.println("Значение первой переменной после перестановки: " + num1);
         System.out.println("Значение второй переменной после перестановки: " + num2);
         System.out.println("Перестановка значений переменных с помощью побитовой операции:");
@@ -85,11 +85,11 @@ public class VariablesTheme {
         int number = 345;
         int firstNum = number % 10;
         int secondNum = (number / 10) % 10;
-        int thirdNum = (number / 10) / 10;
-        int amount = firstNum + secondNum + thirdNum;
-        int multiplication = firstNum * secondNum * thirdNum;
-        System.out.println("Сумма цифр числа 345 = " + amount);
-        System.out.println("Произведение цифр числа 345 = " + multiplication);
+        int thirdNum = number / 100;
+        int sumDigits = firstNum + secondNum + thirdNum;
+        int prodDigits = firstNum * secondNum * thirdNum;
+        System.out.println("Сумма цифр числа 345 = " + sumDigits);
+        System.out.println("Произведение цифр числа 345 = " + prodDigits);
 
         System.out.println("\n8 Вывод на консоль ASCII-арт Дюка.");
         char backSlash = 92;
